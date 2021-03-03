@@ -2,18 +2,8 @@
     "manifest_version": 2,
     "name": "Beautiful Girls newtab",
     "author": "Nguyen Van Hiep",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "See the pretty girls in the new tab page.",
-    "permissions": [
-        "cookies",
-        "http://*/*",
-        "https://*/*",
-        "storage",
-        "unlimitedStorage",
-        "tabs",
-        "webRequest",
-        "webRequestBlocking"
-    ],
     "chrome_url_overrides": {
         "newtab": "newtab.html"
     },
@@ -30,17 +20,5 @@
     "background": {
         "scripts": ["background.js"]
     },
-    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://ssl.google-analytics.com https://ajax.googleapis.com https://apis.google.com; object-src 'self'",
-    "content_scripts": [
-        {
-            "all_frames": true,
-            "js": [
-                "newtab.js"
-            ],
-            "matches": [
-                "https://hypnguyen.us/*"
-            ]
-        }
-    ]
-    }
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://ssl.google-analytics.com https://ajax.googleapis.com https://apis.google.com; object-src 'self'"
 }
